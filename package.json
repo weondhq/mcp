@@ -1,0 +1,48 @@
+{
+  "name": "@weond/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Weond. Lets Claude, Cursor, Windsurf and other assistants deploy projects, read logs and manage env vars.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Weond <team@weond.com> (https://weond.com)",
+  "homepage": "https://docs.weond.com/mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weondhq/mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/weondhq/mcp/issues"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "bin": {
+    "weond-mcp": "./bin/weond-mcp.mjs"
+  },
+  "exports": {
+    ".": "./src/server.mjs",
+    "./client": "./src/client.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "node ./bin/weond-mcp.mjs",
+    "test": "node --test ./test/mcp.test.mjs"
+  },
+  "keywords": [
+    "weond",
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "cursor",
+    "deployment",
+    "hosting"
+  ]
+}
